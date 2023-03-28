@@ -4,13 +4,19 @@
 }
 
 .square {
-   /* border: 1px solid black;*/
-    flex-shrink: 0;
-    flex-basis: 6.25%; /*1/16*/
-    min-width: 20px;
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    
+    background: red;
 }
 
-/*
-.square:nth-child(16n) {
-    flex-basis: 100%;
+.square:nth-child(17n + 1) {
+    width: 100%;
+    border: 0;
+    height: 0;
+}
+
+.square:nth-child(17n) {
+    background: blue;
 }
