@@ -7,8 +7,6 @@
     border: 1px solid black;
     height: 20px;
     width: 20px;
-    
-    background: red;
 }
 
 .square:nth-child(17n + 1) {
@@ -17,6 +15,3 @@
     height: 0;
 }
 
-.square:nth-child(17n) {
-    background: blue;
-}
