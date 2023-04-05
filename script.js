@@ -13,3 +13,37 @@ for (let i = 1; i < 257; i++) {
         container.appendChild(brk);
     }
 }
+
+const body = document.getElementsByTagName("body")[0];
+const btn = document.createElement('button');
+btn.textContent = "New Grid";
+body.appendChild(btn);
+btn.addEventListener('click', newGrid);
+
+function newGrid() {
+    let side = prompt("How many squares per side?");
+    if (side <= 100 && side >= 2) {
+        for (let i = 1; i < (side * side + 1); i++) {
+            let newSquare = document.createElement('div');
+            newSquare.className = 'newSquare';
+            newSquare.addEventListener('mouseover', () => {
+                newSquare.style.background = 'black';
+            })
+            container.appendChild(newSquare);
+            if (i % side === 0) {
+                let brk = document.createElement('div');
+                brk.className = 'brk';
+                container.appendChild(brk);
+            }
+        }
+    }
+    else if (side > 100) {
+        alert("Maximum is 100. Try again.");
+    }
+    else if (side < 2) {
+        alert("Minimum is 2. Try again.");
+    }
+    else {
+        alert("Invalid input. Try again.");
+    }
+}
