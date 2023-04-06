@@ -4,7 +4,7 @@ for (let i = 1; i < 257; i++) {
     let square = document.createElement('div');
     square.className = 'square';
     square.addEventListener('mouseover', () => {
-        square.style.background = 'black';
+        square.style.background = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
     })
     container.appendChild(square);
     if (i % 16 === 0) {
@@ -27,12 +27,12 @@ function newGrid() {
             container.removeChild(container.firstChild);
         }
         for (let i = 1; i < (side * side + 1); i++) {
-            let newSquare = document.createElement('div');
-            newSquare.className = 'newSquare';
-            newSquare.addEventListener('mouseover', () => {
-                newSquare.style.background = 'black';
+            let square = document.createElement('div');
+            square.className = 'square';
+            square.addEventListener('mouseover', () => {
+                square.style.background = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
             })
-            container.appendChild(newSquare);
+            container.appendChild(square);
             if (i % side === 0) {
                 let brk = document.createElement('div');
                 brk.className = 'brk';
