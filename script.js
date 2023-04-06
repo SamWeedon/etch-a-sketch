@@ -23,6 +23,9 @@ btn.addEventListener('click', newGrid);
 function newGrid() {
     let side = prompt("How many squares per side?");
     if (side <= 100 && side >= 2) {
+        while (container.hasChildNodes()) {
+            container.removeChild(container.firstChild);
+        }
         for (let i = 1; i < (side * side + 1); i++) {
             let newSquare = document.createElement('div');
             newSquare.className = 'newSquare';
