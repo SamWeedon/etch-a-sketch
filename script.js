@@ -4,14 +4,7 @@ for (let i = 1; i < 257; i++) {
     let square = document.createElement('div');
     square.className = 'square';
     square.addEventListener('mouseover', () => {
-        const currentOpacity = square.style.opacity;
-        square.style.background = `rgb(0,0,0)`;
-        if (currentOpacity) {
-        square.style.opacity = Number(currentOpacity) + 0.1;
-        }
-        else {
-            square.style.opacity = 0.1;
-        }
+        square.style.background = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
     })
     container.appendChild(square);
     if (i % 16 === 0) {
@@ -37,14 +30,7 @@ function newGrid() {
             let square = document.createElement('div');
             square.className = 'square';
             square.addEventListener('mouseover', () => {
-                const currentOpacity = square.style.opacity;
-                square.style.background = `rgb(0,0,0)`;
-                if (currentOpacity) {
-                    square.style.opacity = Number(currentOpacity) + 0.1;
-                }
-                else {
-                    square.style.opacity = 0.1;
-                }
+                square.style.background = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
             })
             container.appendChild(square);
             if (i % side === 0) {
